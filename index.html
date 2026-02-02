@@ -5,6 +5,34 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arsenal Dark - Lifestyle Pack</title>
+    
+    <!-- Google Ads (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-CONVERSION_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-CONVERSION_ID'); // Substitua AW-CONVERSION_ID pelo seu ID
+    </script>
+
+    <!-- Facebook Pixel Code -->
+    <script>
+      !function(f,b,e,v,n,t,s)
+      {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)}(window, document,'script',
+      'https://connect.facebook.net/en_US/fbevents.js');
+      fbq('init', 'PIXEL_ID'); // Substitua PIXEL_ID pelo seu ID
+      fbq('track', 'PageView');
+    </script>
+    <noscript>
+      <img height="1" width="1" style="display:none" 
+           src="https://www.facebook.com/tr?id=PIXEL_ID&ev=PageView&noscript=1"/>
+    </noscript>
+
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet">
     <style>
@@ -22,10 +50,9 @@
       .bg-gold-gradient {
         background: linear-gradient(135deg, #ffd700 0%, #b8860b 100%);
       }
-      .line-connector {
-        position: absolute;
-        border: 2px solid #ffd700;
-        z-index: 0;
+      .mask-gradient {
+        mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+        -webkit-mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
       }
     </style>
   <script type="importmap">
